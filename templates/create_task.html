@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <link rel="stylesheet" type="text/css" href="./static/register.css"/>
+    <title>Добавление новой задачи</title>
+</head>
+<body>
+
+<button class="add-task-button" onclick="redirectToTaskList()">Вернуться к задачам</button>
+
+<form id="addTaskForm">
+    <label for="title">Название:</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="description">Описание:</label>
+    <textarea id="description" name="description" rows="4" cols="40" required></textarea>
+
+    <label for="status">Статус:</label>
+    <input type="text" id="status" name="status" required>
+
+    <label for="assignedUser">Назначить пользователю:</label>
+    <select id="assignedUser" name="assignedUser" required></select>
+
+    <button type="button" onclick="addTask()">Добавить задачу</button>
+</form>
+
+<script src="static/fetchUsers.js"></script>
+<script src="static/addTask.js"></script>
+<script src="static/redirect.js"></script>
+
+</body>
+</html>

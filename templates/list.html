@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <link rel="stylesheet" type="text/css" href="static/list.css"/>
+    <link rel="stylesheet" type="text/css" href="static/mini-menu.css"/>
+
+    <title>Задачи</title>
+
+</head>
+
+<body>
+
+<button class="add-task-button" onclick="redirectToTask()">Добавить задачу</button>
+
+<table>
+    <tr>
+        <th>Имя</th>
+        <th>Возраст</th>
+        <th>Email</th>
+    </tr>
+    {{range .}}
+    <tr>
+        <td class="usernameCell">{{.Name}}</td>
+        <td>{{.Age}}</td>
+        <td>{{.Email}}</td>
+    </tr>
+    {{end}}
+</table>
+
+<div id="tasksContainer"></div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="static/get_task.js"></script>
+<script src="static/redirect.js"></script>
+<script src="static/deleteTask.js"></script>
+
+</body>
+</html>
